@@ -1,76 +1,13 @@
-# plugin-starter
+# halo-plugin-aplayer
 
-Halo 2.0 插件开发快速开始模板。
+集成 [APlayer](https://aplayer.js.org/) 音乐播放器与 [MetingJS](https://github.com/metowolf/MetingJS) 到 Halo 2.0。
 
-## 开发环境
+[![pAwNZ7R.png](https://s21.ax1x.com/2024/10/25/pAwNZ7R.png)](https://imgse.com/i/pAwNZ7R)
 
-插件开发的详细文档请查阅：<https://docs.halo.run/developer-guide/plugin/introduction>
+[![pAwNVB9.png](https://s21.ax1x.com/2024/10/25/pAwNVB9.png)](https://imgse.com/i/pAwNVB9)
 
-所需环境：
+## 使用说明
 
-1. Java 17
-2. Node 20
-3. pnpm 9
-4. Docker (可选)
+在默认编辑器中，点击“插入”按钮，选择“APlayer”，根据[官方文档](https://aplayer.js.org/#/home)配置播放器参数即可。
 
-克隆项目：
-
-```bash
-git clone git@github.com:halo-sigs/plugin-starter.git
-
-# 或者当你 fork 之后
-
-git clone git@github.com:{your_github_id}/plugin-starter.git
-```
-
-```bash
-cd path/to/plugin-starter
-```
-
-### 运行方式 1（推荐）
-
-> 此方式需要本地安装 Docker
-
-```bash
-# macOS / Linux
-./gradlew pnpmInstall
-
-# Windows
-./gradlew.bat pnpmInstall
-```
-
-```bash
-# macOS / Linux
-./gradlew haloServer
-
-# Windows
-./gradlew.bat haloServer
-```
-
-执行此命令后，会自动创建一个 Halo 的 Docker 容器并加载当前的插件，更多文档可查阅：<https://docs.halo.run/developer-guide/plugin/basics/devtools>
-
-### 运行方式 2
-
-> 此方式需要使用源码运行 Halo
-
-编译插件：
-
-```bash
-# macOS / Linux
-./gradlew build
-
-# Windows
-./gradlew.bat build
-```
-
-修改 Halo 配置文件：
-
-```yaml
-halo:
-  plugin:
-    runtime-mode: development
-    fixedPluginPath:
-      - "/path/to/plugin-starter"
-```
-
-最后重启 Halo 项目即可。
+或者插入“Meting”，输入歌曲链接即可自动生成播放器。

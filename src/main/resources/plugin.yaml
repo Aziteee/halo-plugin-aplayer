@@ -4,19 +4,19 @@ apiVersion: plugin.halo.run/v1alpha1
 kind: Plugin
 metadata:
   # The name defines how the plugin is invoked, A unique name
-  name: starter
+  name: halo-plugin-aplayer
 spec:
   enabled: true
   requires: ">=2.20.0"
   author:
-    name: Halo
-    website: https://github.com/halo-dev
+    name: Azite
+    website: https://github.com/Aziteee
   logo: logo.png
-  homepage: https://github.com/halo-dev/plugin-starter#readme
-  repo: https://github.com/halo-dev/plugin-starter
-  issues: https://github.com/halo-dev/plugin-starter/issues
-  displayName: "插件快速开始模板"
-  description: "这是一个插件快速开始模板"
+  homepage: https://github.com/Aziteee/halo-plugin-aplayer
+  repo: https://github.com/Aziteee/halo-plugin-aplayer
+  issues: https://github.com/Aziteee/halo-plugin-aplayer/issues
+  displayName: "APlayer"
+  description: "集成 APlayer 音乐播放器与 MetingJS 到 Halo 2.0。"
   license:
     - name: "GPL-3.0"
-      url: "https://github.com/halo-dev/plugin-starter/blob/main/LICENSE"
+      url: "https://github.com/Aziteee/halo-plugin-aplayer/blob/main/LICENSE"
