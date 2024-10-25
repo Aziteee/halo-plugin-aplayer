@@ -17,10 +17,6 @@ export default defineConfig({
           src: `./node_modules/aplayer/dist/*`,
           dest: "../static",
         },
-        {
-          src: `./node_modules/meting/dist/*`,
-          dest: "../static",
-        },
       ],
     }),
   ],

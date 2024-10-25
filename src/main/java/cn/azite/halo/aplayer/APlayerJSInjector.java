@@ -5,7 +5,7 @@ public class APlayerJSInjector {
     return """
         <link rel="stylesheet" href="/plugins/halo-plugin-aplayer/assets/static/APlayer.min.css">
         <script defer src="/plugins/halo-plugin-aplayer/assets/static/APlayer.min.js"></script>
-        <script defer src="/plugins/halo-plugin-aplayer/assets/static/Meting.min.js"></script>
+        <script defer src="/plugins/halo-plugin-aplayer/assets/static/Meting.js"></script>
         <script>
             document.addEventListener("DOMContentLoaded", function() {
               const aplayerElements = document.getElementsByClassName("aplayer");
