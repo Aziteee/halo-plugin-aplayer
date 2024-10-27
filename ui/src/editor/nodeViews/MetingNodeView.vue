@@ -26,6 +26,7 @@ watch(autoLink, (newVal) => {
 
 <style lang="scss" scoped>
 .meting-nodeview-container {
+  margin: 10px 5px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
