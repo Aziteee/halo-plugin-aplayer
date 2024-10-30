@@ -4,16 +4,26 @@ import org.springframework.stereotype.Component;
 
 import lombok.RequiredArgsConstructor;
 import reactor.core.publisher.Mono;
+import run.halo.app.plugin.ReactiveSettingFetcher;
 import run.halo.app.theme.ReactivePostContentHandler;
 
-@RequiredArgsConstructor
 @Component
+@RequiredArgsConstructor
 public class APlayerPostContentHandler implements ReactivePostContentHandler {
 
-  @Override
-  public Mono<PostContentContext> handle(PostContentContext postContent) {
-    postContent.setContent(APlayerJSInjector.getAPlayerScript() + "\n" + postContent.getContent());
-    return Mono.just(postContent);
-  }
+    private final ReactiveSettingFetcher reactiveSettingFetcher;
+
+    private static void injectJS(PostContentContext contentContext, String api) {
+        String parsedAPlayerScript = APlayerJSInjector.getAPlayerScript(api);
+        contentContext.setContent(parsedAPlayerScript + "\n" + contentContext.getContent());
+    }
+
+    @Override
+    public Mono<PostContentContext> handle(PostContentContext contentContext) {
+        return reactiveSettingFetcher.fetch("custom", CustomSetting.class).map(customSetting -> {
+            injectJS(contentContext, customSetting.api());
+            return contentContext;
+        });
+    }
 
 }

@@ -1,0 +1,12 @@
+apiVersion: v1alpha1
+kind: Setting
+metadata:
+  name: halo-plugin-aplayer-settings
+spec:
+  forms:
+    - group: custom  
+      label: 自定义  
+      formSchema:
+        - $formkit: text  
+          name: api  
+          label: "Meting API"

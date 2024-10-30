@@ -12,6 +12,8 @@ spec:
     name: Azite
     website: https://github.com/Aziteee
   logo: logo.png
+  configMapName: halo-plugin-aplayer-configmap
+  settingName: halo-plugin-aplayer-settings
   homepage: https://github.com/Aziteee/halo-plugin-aplayer
   repo: https://github.com/Aziteee/halo-plugin-aplayer
   issues: https://github.com/Aziteee/halo-plugin-aplayer/issues
