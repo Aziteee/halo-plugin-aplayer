@@ -10,3 +10,4 @@ spec:
         - $formkit: text  
           name: api  
           label: "Meting API"
+          help: "示例：http://example.com/api.php?server=:server&type=:type&id=:id&auth=:auth&r=:r"

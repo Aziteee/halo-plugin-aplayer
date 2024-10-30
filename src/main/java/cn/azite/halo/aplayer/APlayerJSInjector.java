@@ -3,7 +3,6 @@ package cn.azite.halo.aplayer;
 public class APlayerJSInjector {
 
     static String getAPlayerScript(String api) {
-        System.out.println(api);
         String apiCustomCode = (api == null) ? "" : "var meting_api='" + api + "';";
         return """
                 <link rel="stylesheet" href="/plugins/halo-plugin-aplayer/assets/static/APlayer.min.css">
