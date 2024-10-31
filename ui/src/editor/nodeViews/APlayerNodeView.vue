@@ -34,11 +34,31 @@ watch(
         </div>
       </div>
       <div class="aplayer-nodeview-content">
-        <input v-model="localAttrs.name" type="text" placeholder="name" />
-        <input v-model="localAttrs.artist" type="text" placeholder="artist" />
-        <input v-model="localAttrs.url" type="text" placeholder="url" />
-        <input v-model="localAttrs.cover" type="text" placeholder="cover" />
-        <input v-model="localAttrs.lrc" type="text" placeholder="lrc" />
+        <input
+          v-model="localAttrs.name"
+          type="text"
+          placeholder="请输入歌曲名称"
+        />
+        <input
+          v-model="localAttrs.artist"
+          type="text"
+          placeholder="请输入艺术家"
+        />
+        <input
+          v-model="localAttrs.url"
+          type="text"
+          placeholder="请输入歌曲地址"
+        />
+        <input
+          v-model="localAttrs.cover"
+          type="text"
+          placeholder="请输入封面地址"
+        />
+        <input
+          v-model="localAttrs.lrc"
+          type="text"
+          placeholder="请输入歌词地址"
+        />
       </div>
     </div>
   </NodeViewWrapper>
