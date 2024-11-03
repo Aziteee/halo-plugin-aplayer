@@ -65,12 +65,12 @@ export const ExtensionAPlayer = Node.create({
   parseHTML() {
     return [
       {
-        tag: "div",
+        tag: "div[aplayer]",
       },
     ];
   },
   renderHTML({ HTMLAttributes }) {
-    return ["div", mergeAttributes(HTMLAttributes, { class: "aplayer" })];
+    return ["div", mergeAttributes(HTMLAttributes, { aplayer: true })];
   },
   addNodeView() {
     return VueNodeViewRenderer(APlayerNodeView);

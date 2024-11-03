@@ -11,7 +11,7 @@ public class APlayerJSInjector {
                 <script>
                     %s
                     document.addEventListener("DOMContentLoaded", function() {
-                      const aplayerElements = document.getElementsByClassName("aplayer");
+                      const aplayerElements = document.querySelectorAll("div[aplayer]");
                       for (let i = 0; i < aplayerElements.length; i++) {
                         const el = aplayerElements[i];
                         new APlayer({
@@ -32,6 +32,5 @@ public class APlayerJSInjector {
                 </script>
                 """.formatted(apiCustomCode);
     }
-
 
 }
