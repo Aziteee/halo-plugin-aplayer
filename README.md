@@ -24,7 +24,7 @@
 
 ```html
 <div
-  class="aplayer"
+  aplayer="true"
   name="name"
   artist="artist"
   url="audio.mp3"
