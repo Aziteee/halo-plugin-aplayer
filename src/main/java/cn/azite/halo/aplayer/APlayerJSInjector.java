@@ -8,6 +8,7 @@ public class APlayerJSInjector {
                 <link rel="stylesheet" href="/plugins/halo-plugin-aplayer/assets/static/APlayer.min.css">
                 <script defer src="/plugins/halo-plugin-aplayer/assets/static/APlayer.min.js"></script>
                 <script defer src="/plugins/halo-plugin-aplayer/assets/static/Meting.js"></script>
+                <link rel="stylesheet" href="/plugins/halo-plugin-aplayer/assets/static/var.css">
                 <script>
                     %s
                     document.addEventListener("DOMContentLoaded", function() {

@@ -1,0 +1,75 @@
+@media (prefers-color-scheme: dark) {
+  .color-scheme-auto,
+  [data-color-scheme='auto'] .aplayer {
+    color-scheme: dark;
+    --aplayer-bg-color: #18181b;
+
+    --aplayer-title-color: #f4f4f5;
+    --aplayer-artist-color: #e4e4e7;
+    --aplayer-lyrics-color: #e4e4e7;
+
+    --aplayer-progress-bar-color: #a1a1aa;
+    --aplayer-progress-loaded-color: #98989a;
+    --aplayer-progress-played-color: #52525b;
+
+    --aplayer-time-color: #e4e4e7;
+    --aplayer-icon-color: #e4e4e7;
+  }
+}
+
+.color-scheme-dark,
+.dark,
+[data-color-scheme='dark'] hyperlink-card {
+    color-scheme: dark;
+    --aplayer-bg-color: #18181b;
+
+    --aplayer-title-color: #f4f4f5;
+    --aplayer-artist-color: #e4e4e7;
+    --aplayer-lyrics-color: #e4e4e7;
+
+    --aplayer-progress-bar-color: #a1a1aa;
+    --aplayer-progress-loaded-color: #98989a;
+    --aplayer-progress-played-color: #52525b;
+
+    --aplayer-time-color: #e4e4e7;
+    --aplayer-icon-color: #e4e4e7;
+}
+
+
+.aplayer-info {
+  background-color: var(--aplayer-bg-color);
+}
+.aplayer-title {
+  color: var(--aplayer-title-color);
+}
+.aplayer-author {
+  color: var(--aplayer-artist-color) !important;
+}
+.aplayer-lrc .aplayer-lrc-contents > p {
+  color: var(--aplayer-lyrics-color);
+}
+
+.aplayer-controller .aplayer-bar {
+  background-color: var(--aplayer-progress-bar-color);
+}
+.aplayer-controller  .aplayer-bar .aplayer-loaded {
+  background-color: var(--aplayer-progress-loaded-color);
+}
+.aplayer-controller  .aplayer-bar .aplayer-played {
+  background-color: var(--aplayer-progress-played-color) !important;
+}
+
+.aplayer-time .aplayer-time-inner > span {
+  color: var(--aplayer-time-color);
+}
+.aplayer-time .aplayer-volume-wrap .aplayer-volume-bar {
+  background-color: var(--aplayer-progress-bar-color);
+}
+.aplayer-time .aplayer-volume-wrap .aplayer-volume-bar .aplayer-volume {
+  background-color: var(--aplayer-progress-played-color) !important;
+}
+
+.aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon path {
+  fill: var(--aplayer-icon-color) !important;
+}
+
