@@ -5,10 +5,10 @@ public class APlayerJSInjector {
     static String getAPlayerScript(String api) {
         String apiCustomCode = (api == null) ? "" : "var meting_api='" + api + "';";
         return """
-                <link rel="stylesheet" href="/plugins/halo-plugin-aplayer/assets/static/APlayer.min.css">
+                <link rel="stylesheet" href="/plugins/halo-plugin-aplayer/assets/static/APlayer.min.css?version=${version}">
                 <script defer src="/plugins/halo-plugin-aplayer/assets/static/APlayer.min.js"></script>
                 <script defer src="/plugins/halo-plugin-aplayer/assets/static/Meting.js"></script>
-                <link rel="stylesheet" href="/plugins/halo-plugin-aplayer/assets/static/var.css">
+                <link rel="stylesheet" href="/plugins/halo-plugin-aplayer/assets/static/var.css?version=${version}">
                 <script>
                     %s
                     document.addEventListener("DOMContentLoaded", function() {
@@ -31,7 +31,8 @@ public class APlayerJSInjector {
                       }
                     });
                 </script>
-                """.formatted(apiCustomCode);
+                """
+                .formatted(apiCustomCode);
     }
 
 }
