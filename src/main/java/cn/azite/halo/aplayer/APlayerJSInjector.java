@@ -2,13 +2,13 @@ package cn.azite.halo.aplayer;
 
 public class APlayerJSInjector {
 
-    static String getAPlayerScript(String api) {
+    static String getAPlayerScript(String api, String version) {
         String apiCustomCode = (api == null) ? "" : "var meting_api='" + api + "';";
         return """
-                <link rel="stylesheet" href="/plugins/halo-plugin-aplayer/assets/static/APlayer.min.css?version=${version}">
+                <link rel="stylesheet" href="/plugins/halo-plugin-aplayer/assets/static/APlayer.min.css?version=%s">
                 <script defer src="/plugins/halo-plugin-aplayer/assets/static/APlayer.min.js"></script>
                 <script defer src="/plugins/halo-plugin-aplayer/assets/static/Meting.js"></script>
-                <link rel="stylesheet" href="/plugins/halo-plugin-aplayer/assets/static/var.css?version=${version}">
+                <link rel="stylesheet" href="/plugins/halo-plugin-aplayer/assets/static/var.css?version=%s">
                 <script>
                     %s
                     document.addEventListener("DOMContentLoaded", function() {
@@ -32,7 +32,7 @@ public class APlayerJSInjector {
                     });
                 </script>
                 """
-                .formatted(apiCustomCode);
+                .formatted(version, version, apiCustomCode);
     }
 
 }
