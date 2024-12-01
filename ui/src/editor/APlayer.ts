@@ -4,6 +4,7 @@ import {
   mergeAttributes,
   Editor,
   ToolboxItem,
+  nodeInputRule,
 } from "@halo-dev/richtext-editor";
 import { markRaw } from "vue";
 import TablerMusic from "~icons/tabler/music";
@@ -74,5 +75,19 @@ export const ExtensionAPlayer = Node.create({
   },
   addNodeView() {
     return VueNodeViewRenderer(APlayerNodeView);
+  },
+  addInputRules() {
+    return [
+      nodeInputRule({
+        find: /^:aplayer[\s\n]$/,
+        type: this.type,
+        getAttributes: () => {
+          return {
+            content: "",
+            editMode: true,
+          };
+        },
+      }),
+    ];
   },
 });

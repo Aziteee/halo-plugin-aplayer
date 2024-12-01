@@ -3,6 +3,7 @@ import {
   VueNodeViewRenderer,
   Editor,
   ToolboxItem,
+  nodeInputRule,
 } from "@halo-dev/richtext-editor";
 import { markRaw } from "vue";
 import TablerMusic from "~icons/tabler/music";
@@ -58,5 +59,19 @@ export const ExtensionMeting = Node.create({
   },
   addNodeView() {
     return VueNodeViewRenderer(MetingNodeView);
+  },
+  addInputRules() {
+    return [
+      nodeInputRule({
+        find: /^:meting[\s\n]$/,
+        type: this.type,
+        getAttributes: () => {
+          return {
+            content: "",
+            editMode: true,
+          };
+        },
+      }),
+    ];
   },
 });
