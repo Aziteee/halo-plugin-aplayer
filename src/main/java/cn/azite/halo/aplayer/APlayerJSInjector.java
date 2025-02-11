@@ -18,6 +18,7 @@ public class APlayerJSInjector {
                         new APlayer({
                           container: el,
                           autoplay: el.getAttribute("autoplay") === "true",
+                          lrcType: 3,
                           audio: [
                             {
                               name: el.getAttribute("name"),
